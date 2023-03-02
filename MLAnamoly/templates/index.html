@@ -1,0 +1,40 @@
+<html>
+<head>
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <link rel="stylesheet" href=".\static\css\index.css">
+    <title>Index</title>
+</head>
+<body>
+    <div class="container1">
+        <div class="pageFront">
+            <h2>Credit Card Fraud Detection</h2>
+            <p> Credit card fraud is a serious and global issue or crime committed by fraud using payment cards such as credit cards or debit cards. 
+                The purpose of these fraudsters is to acquire goods without paying or to acquire unauthorised funds from an account. 
+                Survey suggests that a typical organisation loses 5% of yearly revenue due to fraud i.e) Unauthorised account activity by someone who doesn’t belong to. In the Banking or payment industry, fraud is an illegal usage of credit card details without the real cardholder’s knowledge. 
+                A stolen credit card/card number is usually the cause of a fraudulent charge. Once a cardholder sees a payment transaction, he did not make on his credit card statement, he/she has the right to dispute the charge by contacting his/her bank. The bank or Credit Card Company conducts an investigation and returns the money to the cardholder.
+                But what if we can detect fraudulent transaction activity in real-time? This way we can take the required action to stop the same. 
+                We can use machine learning techniques to detect fraudulent transactions.</p>
+        </div>
+        <form action="{{ url_for('predict')}}" method="POST">
+            <div class="box">
+                <h4>Enter The input: </h1>
+                <input type="text" name="year" class="value" id="value1" placeholder="Enter the values to predict the fraudulent transaction: " /><br>
+                <input type="submit" class="value"><br>
+                <h4 id="pred">{{prediction_text}}</h1>
+                
+            </div>
+        </form>
+        <!-- {% if output %}
+            <h1>The Predicted value for our transaction is: </h1>
+            {{ output }}
+        {% endif %} -->
+       
+        
+       
+    </div>
+    
+</body>
+</html>
+`
